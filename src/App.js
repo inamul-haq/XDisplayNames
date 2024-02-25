@@ -1,44 +1,6 @@
-import { useState } from "react";
-import "./styles.css";
+import React from "react";
+import DisplayName from "./Displayname";
 
-export default function App() {
-  const [fullName, setFullName] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-
-  const handleNameChange = (e) => {
-    e.preventDefault();
-    setFullName("Full Name: " + firstName + " " + lastName);
-  };
-
-  return (
-    <div>
-      <h1>Full Name Display</h1>
-      <form onSubmit={handleNameChange}>
-        <label>
-          First Name:
-          <input
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            type="text"
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Last Name:
-          <input
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            type="text"
-            required
-          />
-        </label>
-        <br />
-        <button type="submit">Submit</button>
-      </form>
-      <br />
-      <div>{fullName}</div>
-    </div>
-  );
-}
+export default function App(){
+  return <DisplayName/>
+};
