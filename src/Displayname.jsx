@@ -8,7 +8,7 @@ export default function DisplayName() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault(); 
-      setFullName('Full name: ' +firstName + " " + lastName);
+      setFullName('Full Name: ' +firstName + " " + lastName);
   };
   return (
     <div>
