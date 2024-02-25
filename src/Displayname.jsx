@@ -8,9 +8,7 @@ export default function DisplayName() {
 
   const handleNameChange = (e) => {
     e.preventDefault(); 
-    if (firstName.trim() && lastName.trim()) {
-      setFullName("Full Name: " + firstName + " " + lastName);
-    }
+      setFullName("Full Name:" + " " + firstName + " " + lastName);
   };
   return (
     <div>
