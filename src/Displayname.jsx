@@ -7,10 +7,11 @@ export default function DisplayName() {
   const [lastName, setLastName] = useState("");
 
   const handleNameChange = (e) => {
-    e.preventDefault();
-    setFullName("Full Name: " + firstName + " " + lastName);
+    e.preventDefault(); 
+    if (firstName.trim() && lastName.trim()) {
+      setFullName("Full Name: " + firstName + " " + lastName);
+    }
   };
-
   return (
     <div>
       <h1>Full Name Display</h1>
