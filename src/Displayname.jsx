@@ -15,7 +15,7 @@ export default function DisplayName() {
   return (
     <div>
       <h1>Full Name Display</h1>
-      <form onSubmit={handleNameChange}>
+      <form >
         <label>
           First Name:
           <input
@@ -36,7 +36,7 @@ export default function DisplayName() {
           />
         </label>
         <br />
-        <button type="submit">Submit</button>
+        <button onClick={handleNameChange} type="submit">Submit</button>
       </form>
       <br />
       <div>{fullName}</div>
