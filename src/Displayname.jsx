@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./styles.css";
 
 export default function DisplayName() {
@@ -6,12 +6,12 @@ export default function DisplayName() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
+  useEffect(() => {
+    setFullName("Full Name: " + firstName + " " + lastName);
+  }, [firstName, lastName]);
+
   const handleNameChange = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
-    if (firstName && lastName) {
-      // Check if both first name and last name are not empty
-      setFullName("Full Name: " + firstName + " " + lastName);
-    }
+    e.preventDefault(); 
   };
 
   return (
