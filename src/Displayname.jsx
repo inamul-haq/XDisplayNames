@@ -8,7 +8,7 @@ export default function DisplayName() {
 
   const handleNameChange = (e) => {
     e.preventDefault(); 
-      setFullName("Full Name:" + " " + firstName + " " + lastName);
+      setFullName(firstName + " " + lastName);
   };
   return (
     <div>
@@ -37,7 +37,7 @@ export default function DisplayName() {
         <button onClick={handleNameChange} type="submit">Submit</button>
       </form>
       <br />
-      <div>{fullName}</div>
+      <div>Full name: {fullName}</div>
     </div>
   );
 }
