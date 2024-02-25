@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./styles.css";
 
 export default function DisplayName() {
@@ -6,12 +6,9 @@ export default function DisplayName() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
-  useEffect(() => {
-    setFullName("Full Name: " + firstName + " " + lastName);
-  }, [firstName, lastName]);
-
   const handleNameChange = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
+    setFullName("Full Name: " + firstName + " " + lastName);
   };
 
   return (
