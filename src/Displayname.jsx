@@ -6,14 +6,14 @@ export default function DisplayName() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
-  const handleNameChange = (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault(); 
       setFullName(firstName + " " + lastName);
   };
   return (
     <div>
       <h1>Full Name Display</h1>
-      <form >
+      <form onSubmit={handleFormSubmit}>
         <label>
           First Name:
           <input
@@ -34,7 +34,7 @@ export default function DisplayName() {
           />
         </label>
         <br />
-        <button onClick={handleNameChange} type="submit">Submit</button>
+        <button type="submit">Submit</button>
       </form>
       <br />
       <div>Full name: {fullName}</div>
