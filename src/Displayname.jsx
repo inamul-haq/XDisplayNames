@@ -10,6 +10,10 @@ export default function DisplayName() {
     e.preventDefault(); 
       setFullName('Full Name: ' +firstName + " " + lastName);
   };
+
+  if(firstName=='' || lastName==''){
+    setFullName('')
+  }
   return (
     <div>
       <h1>Full Name Display</h1>
