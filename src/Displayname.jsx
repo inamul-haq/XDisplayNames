@@ -8,7 +8,7 @@ export default function DisplayName() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault(); 
-      setFullName(firstName + " " + lastName);
+      setFullName('Full name: ' +firstName + " " + lastName);
   };
   return (
     <div>
@@ -33,11 +33,12 @@ export default function DisplayName() {
             required
           />
         </label>
-        <br />
+        <br/>
         <button type="submit">Submit</button>
+        <br />
+      <div>{fullName}</div>
       </form>
-      <br />
-      <div>Full name: {fullName}</div>
+      
     </div>
   );
 }
