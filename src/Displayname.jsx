@@ -7,8 +7,11 @@ export default function DisplayName() {
   const [lastName, setLastName] = useState("");
 
   const handleNameChange = (e) => {
-    e.preventDefault();
-    setFullName("Full Name: " + firstName + " " + lastName);
+    e.preventDefault(); // Prevent default form submission behavior
+    if (firstName && lastName) {
+      // Check if both first name and last name are not empty
+      setFullName("Full Name: " + firstName + " " + lastName);
+    }
   };
 
   return (
