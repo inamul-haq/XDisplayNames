@@ -38,7 +38,7 @@ export default function DisplayName() {
         <br />
       <div>{fullName}</div>
       </form>
-      
+      <div>{fullName}</div>
     </div>
   );
 }
