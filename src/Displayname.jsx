@@ -8,12 +8,10 @@ export default function DisplayName() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault(); 
-      setFullName('Full Name: ' +firstName + " " + lastName);
+    if(firstName!='' && lastName!=''){
+      setFullName('Full Name: ' +firstName + " " + lastName);}
   };
 
-  if(firstName=='' || lastName==''){
-    setFullName('')
-  }
   return (
     <div>
       <h1>Full Name Display</h1>
@@ -24,7 +22,7 @@ export default function DisplayName() {
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             type="text"
-            required
+            
           />
         </label>
         <br />
@@ -34,7 +32,7 @@ export default function DisplayName() {
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             type="text"
-            required
+            
           />
         </label>
         <br/>
